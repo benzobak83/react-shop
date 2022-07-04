@@ -1,32 +1,30 @@
 .header {
-    background-color: rgb(49, 49, 172);
-    height: 64px;
+  background-color: rgb(49, 49, 172);
+  height: 64px;
 }
 .brand-logo {
-    margin-left: 10px;
-  }
-  .content.container {
-    min-height: calc(100vh - 70px - 64px);
-    padding-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-start;
-    position: relative;
-   
-  
-  }
+  margin-left: 10px;
+}
+.content.container {
+  min-height: calc(100vh - 70px - 64px);
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-start;
+  position: relative;
+}
 
- .page-footer {
-    background-color: rgb(49, 49, 172);
-    height: 70px;
- }
-  
+.page-footer {
+  background-color: rgb(49, 49, 172);
+  height: 70px;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
- .card.product {
+.card.product {
   flex: 0 1 24%;
   display: flex;
   flex-direction: column;
@@ -34,10 +32,14 @@
   margin-left: 5px;
   min-height: 400px;
   min-width: 300px;
- }
- .card-content {
+  @media screen and (max-width: 370px) {
+    min-height: 300px;
+    min-width: 250px;
+  }
+}
+.card-content {
   flex-grow: 1;
- }
+}
 
 //  ---корзина---
 .cart {
@@ -45,49 +47,49 @@
   top: 5rem;
   right: 3rem;
   font-size: 20px;
-  padding:5px 7px 3px 7px;
+  padding: 5px 7px 3px 7px;
   border-radius: 2px;
   cursor: pointer;
   z-index: 10;
 }
 .cart-list {
-  
   position: fixed;
   background-color: white;
   width: 900px;
   max-width: 95%;
   left: 50%;
   top: 50%;
- transform: translate(-50%, -50%);
- animation: showCart 0.5s ease-in-out;
- .items-controller {
-  cursor: pointer;
-  
-  vertical-align: middle;
-  color: #26a69a;
-  &.remove:hover{
-    color: red
+  transform: translate(-50%, -50%);
+  animation: showCart 0.5s ease-in-out;
+
+  .items-controller {
+    cursor: pointer;
+
+    vertical-align: middle;
+    color: #26a69a;
+    &.remove:hover {
+      color: red;
+    }
+    &.plus:hover {
+      color: green;
+    }
   }
-  &.plus:hover{
-    color: green
+  .card-close {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    cursor: pointer;
+    font-size: 25px;
   }
- }
- .card-close {
-  position: absolute;
-  right: 7px;
-  top: 7px;
-  cursor: pointer;
-  font-size: 25px;
- }
- .item-delete {
-  transition: all 0.2s;
-  cursor: pointer;
-  &:hover {
-    color: #e53935;
+  .item-delete {
+    transition: all 0.2s;
+    cursor: pointer;
+    &:hover {
+      color: #e53935;
+    }
   }
- }
 }
-@keyframes showCart{
+@keyframes showCart {
   from {
     top: 30%;
     opacity: 0;
@@ -103,7 +105,7 @@
   animation: fade-toast 0.3s ease-in-out;
   max-height: 100px;
 }
-@keyframes fade-toast{
+@keyframes fade-toast {
   from {
     opacity: 0;
     transform: translateX(300px);
@@ -118,9 +120,8 @@
 }
 .item-animation-out {
   animation: fade-out-item 0.3s ease-in-out;
- 
 }
-@keyframes fade-item{
+@keyframes fade-item {
   from {
     opacity: 0;
   }
@@ -128,7 +129,7 @@
     opacity: 1;
   }
 }
-@keyframes fade-out-item{
+@keyframes fade-out-item {
   from {
     opacity: 1;
   }
@@ -136,4 +137,3 @@
     opacity: 0;
   }
 }
-

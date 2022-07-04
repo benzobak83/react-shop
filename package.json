@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
-  "homepage": "https://benzobak83.github.io/react_app_movies",
+  "homepage": "https://benzobak83.github.io/react-shop",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "prod": "cross-env NODE_ENV=production webpack --mode production",
